@@ -1,0 +1,10 @@
+
+
+    Criar projeto/pasta
+dotnet new console -o meuPrimeirPrograma
+
+    Executar
+dotnet run
+
+    Auto-identação
+Alt + Shift + F
