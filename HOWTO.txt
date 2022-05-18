@@ -8,3 +8,8 @@ dotnet run
 
     Auto-identação
 Alt + Shift + F
+
+    DEBUG
+Apagar a pasta .vscode
+F5 > irá criar uma nova pasta .vscode
+F5 > vai rodar o debug

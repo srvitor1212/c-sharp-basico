@@ -29,11 +29,10 @@ namespace Curso
             Console.WriteLine("Área de X = " + areaX.ToString("F4"), CultureInfo.InvariantCulture );
             Console.WriteLine("Área de Y = " + areaY.ToString("F4"), CultureInfo.InvariantCulture );
 
-            if (areaX > areaY) {
+            if (areaX > areaY)
                 Console.WriteLine("X é maior");
-            } else {
+            else
                 Console.WriteLine("Y é maior");
-            }
         }
     }
 }

@@ -1,12 +1,12 @@
 ﻿
-
 using System;
 
-
-namespace Curso 
+namespace Curso
 {
-    class Program {
-        static void Main(string[] args) {
+    class Program
+    {
+        static void Main(string[] args)
+        {
             Console.WriteLine("Dentro da Main");
         }
     }
