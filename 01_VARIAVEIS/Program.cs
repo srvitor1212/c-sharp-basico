@@ -3,6 +3,9 @@ namespace Curso
 {
     class Program {
         static void Main(string[] args) {
+
+
+
             Console.WriteLine("===================================================================================================================");
             Console.WriteLine("========== Básicos");
             /*
@@ -12,6 +15,16 @@ namespace Curso
                 string - 
                 bool - 
             */
+            Console.WriteLine("========== Valores Nulos (null, nullable)");
+            Nullable<double> x = null;
+            double? y = null;
+            if (x == null && y == null) {
+                //Se y for null, recebe 0.75
+                double a = y ?? 0.75;
+                Console.WriteLine("x e y são nulos - a=" + a);
+            }
+
+
 
             Console.WriteLine("===================================================================================================================");
             Console.WriteLine("========== Números Inteiros");
@@ -42,6 +55,8 @@ namespace Curso
                     var hexLiteral = 0x2A;
                     var binaryLiteral = 0b_0010_1010;
             */
+
+
 
             Console.WriteLine("===================================================================================================================");
             Console.WriteLine("========== Números Flutuantes");

@@ -25,6 +25,11 @@ namespace Curso
                 vect[i] = new Produto{Nome = "O produto " + i, Preco = 100+i};
                 Console.WriteLine("idx[" + i + "]= " + vect[i]);
             }
+
+            /* Recebendo N parâmetros no objeto */
+            //int res = Somar.Soma(new int[] {2, 3, 4, 5}); // sem o params no objeto
+            int res = Somar.Soma(2, 3, 4, 5);
+            Console.WriteLine("res=" + res);
         }
     }
 }
