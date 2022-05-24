@@ -50,6 +50,14 @@ namespace Curso
             //Encontrar todos que o tamanho é 5
             List<string> res = lista02.FindAll(x => x.Length == 5);
             ImprimeLista(res);
+
+            //Adicionar vários lista
+            lista02.AddRange(new string[] {"João", "Gilberto", "Fernando", "Mariana"});
+            ImprimeLista(lista02);
+
+            //Remover
+            lista02.Remove("João");
+            ImprimeLista(lista02);
         }
 
         static void ImprimeLista(List<string> lst)

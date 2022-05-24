@@ -13,3 +13,12 @@ Alt + Shift + F
 Apagar a pasta .vscode
 F5 > irá criar uma nova pasta .vscode
 F5 > vai rodar o debug
+
+
+    Teórica
+C#....: É a linguágem de programação, são as regras sintáticas.
+.NET..: É uma especificação que permite o desenvolvimento de várias linguagens (C#, VB, F#). Surgiu em 2002 e é a plataforma aonde criamos as aplicações
+    O .NET tem basicamente 2 componentes:
+        BCL: Base Class Library, Biblioteca de classes base. Exemplo.: System.
+        CLR: Common Language Runtime, é a máquina virtual que executa o programa .NET.
+.NET Core: Open Source, É um implementação do .NET que surgiu em 2016 criada com a microsoft + comunidade. Criado para ser multi-plataforma e performático.

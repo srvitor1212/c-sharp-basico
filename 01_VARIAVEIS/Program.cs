@@ -14,6 +14,7 @@ namespace Curso
                 char - 
                 string - 
                 bool - 
+                var - atribui automáticamente o tipo, exemplo var texto = "Vitor";
             */
             Console.WriteLine("========== Valores Nulos (null, nullable)");
             Nullable<double> x = null;
