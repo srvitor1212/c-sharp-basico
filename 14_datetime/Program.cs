@@ -38,6 +38,31 @@ namespace Curso
                 System.Console.WriteLine("não é");
             }
 
+
+            //---------------------------------------------------
+            System.Console.WriteLine("=================== datetime kind");
+            DateTime d1 = new DateTime(2022, 12, 31, 13, 54, 49, DateTimeKind.Local); //do computador
+            DateTime d2 = new DateTime(2022, 12, 31, 13, 54, 49, DateTimeKind.Utc); //hora do GMT (greenwich mean time)
+            DateTime d3 = new DateTime(2022, 12, 31, 13, 54, 49);
+            System.Console.WriteLine("d1..: " + d1);
+            System.Console.WriteLine("d2..: " + d2);
+            System.Console.WriteLine("d3..: " + d3);
+
+            System.Console.WriteLine("=== d1");
+            System.Console.WriteLine("kind.....: " + d1.Kind);
+            System.Console.WriteLine("to local.: " + d1.ToLocalTime());
+            System.Console.WriteLine("to utc...: " + d1.ToUniversalTime()); //adicionar 3 horas pois o brasil é GMT-3
+
+            System.Console.WriteLine("=== d2");
+            System.Console.WriteLine("kind.....: " + d2.Kind);
+            System.Console.WriteLine("to local.: " + d2.ToLocalTime());
+            System.Console.WriteLine("to utc...: " + d2.ToUniversalTime());
+
+            System.Console.WriteLine("=== d2");
+            System.Console.WriteLine("kind.....: " + d3.Kind);
+            System.Console.WriteLine("to local.: " + d3.ToLocalTime());
+            System.Console.WriteLine("to utc...: " + d3.ToUniversalTime());            
+
         }
     }
 }
