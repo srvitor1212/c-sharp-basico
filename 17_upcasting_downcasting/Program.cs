@@ -35,6 +35,16 @@ namespace Course
                 acc5.UpdateBalance();
                 Console.WriteLine("Update!");
             }
+
+            //---------------------------------------------------------------
+            // Virtual / sobreposição
+            Account conta1 = new Account(1, "Vitor", 500);
+            Account conta2 = new SavingsAccount(2, "Maria", 500, 44.5);
+
+            System.Console.WriteLine("c1=" + conta1.Balance + ". c2=" + conta2.Balance);
+            conta1.Withdraw(10);
+            conta2.Withdraw(10);
+            System.Console.WriteLine("c1=" + conta1.Balance + ". c2=" + conta2.Balance);
         }
     }
 }

@@ -17,9 +17,9 @@
             Balance = balance;
         }
 
-        public void Withdraw(double amount)
+        public virtual void Withdraw(double amount) // virtual = esse método pode ser sobre escreito com override
         {
-            Balance -= amount;
+            Balance -= amount + 5.0; // R$ 5 de taxa
         }
 
         public void Deposit(double amount)
