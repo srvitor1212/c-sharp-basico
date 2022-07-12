@@ -20,7 +20,9 @@ namespace Curso
                                         "cialmente escolhida ou trocar para a porta que sobrou?" + 
                                         "\n");
 
-            int qtdRodadas = 1000000;
+            
+            //----------------------------------------------------------------------------------------------------------------------------------------------
+            int qtdRodadas = 100000;
             double VITORIAS = 0;
             double DERROTAS = 0;
 
@@ -36,11 +38,14 @@ namespace Curso
                     DERROTAS++;
             }
             double percentVitoria = (VITORIAS / (VITORIAS+DERROTAS)) * 100;
-            System.Console.WriteLine(   "Venceu " + VITORIAS + " de " + (VITORIAS+DERROTAS) + 
-                                        ", percentual de vitória de " + percentVitoria + " %");
+            string strVitorias = string.Format("{0:0,0}", VITORIAS);
+            string strTotal = string.Format("{0:0,0}", VITORIAS+DERROTAS);
+            string strPercent = string.Format("{0:0,0.00}", percentVitoria);
+            System.Console.WriteLine(   "Venceu " + strVitorias + " de " + (strTotal) + 
+                                        ", percentual de vitória de " + strPercent + " %");
 
 
-
+            //----------------------------------------------------------------------------------------------------------------------------------------------
             System.Console.WriteLine(   "\n== Calcula quando o jogador escolhe uma porta, o programa elimida uma das portas restantes" + 
                                         " e então o jogador troca de porta sempre");
             VITORIAS = 0;
@@ -58,8 +63,11 @@ namespace Curso
                     DERROTAS++;
             }
             percentVitoria = (VITORIAS / (VITORIAS+DERROTAS)) * 100;
-            System.Console.WriteLine(   "Venceu " + VITORIAS + " de " + (VITORIAS+DERROTAS) + 
-                                        ", percentual de vitória de " + percentVitoria + " %");
+            strVitorias = string.Format("{0:0,0}", VITORIAS);
+            strTotal = string.Format("{0:0,0}", VITORIAS+DERROTAS);
+            strPercent = string.Format("{0:0,0.00}", percentVitoria);
+            System.Console.WriteLine(   "Venceu " + strVitorias + " de " + (strTotal) + 
+                                        ", percentual de vitória de " + strPercent + " %");
             
         }
 
@@ -111,7 +119,7 @@ namespace Curso
         }
 
 
-        public static List<Porta> RemoverUmaPorta(List<Porta> portas)
+        public static void RemoverUmaPorta(List<Porta> portas)
         {
             foreach (Porta p in portas)
             {
@@ -121,8 +129,6 @@ namespace Curso
                     break;
                 }
             }
-
-            return portas;
         }
 
 
