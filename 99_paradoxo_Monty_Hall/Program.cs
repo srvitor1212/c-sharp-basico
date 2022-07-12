@@ -1,5 +1,7 @@
 ﻿
-using System;
+
+using System.Globalization;
+
 
 namespace Curso
 {
@@ -18,11 +20,11 @@ namespace Curso
                                         "cialmente escolhida ou trocar para a porta que sobrou?" + 
                                         "\n");
 
-            int qtdRodadas = 1000;
+            int qtdRodadas = 1000000;
             double VITORIAS = 0;
             double DERROTAS = 0;
 
-            System.Console.WriteLine("== Calcula quando o jogador escolhe uma porta e fica com ela até o fim do jogo!");
+            System.Console.WriteLine("\n== Calcula quando o jogador escolhe uma porta e fica com ela até o fim do jogo!");
             for (int i = 1; i <= qtdRodadas; i++)
             {
                 List<Porta> portas = GerarPortas();
@@ -39,7 +41,7 @@ namespace Curso
 
 
 
-            System.Console.WriteLine(   "== Calcula quando o jogador escolhe uma porta, o programa elimida uma das portas restantes" + 
+            System.Console.WriteLine(   "\n== Calcula quando o jogador escolhe uma porta, o programa elimida uma das portas restantes" + 
                                         " e então o jogador troca de porta sempre");
             VITORIAS = 0;
             DERROTAS = 0;
@@ -48,6 +50,7 @@ namespace Curso
             {
                 List<Porta> portas = GerarPortas();
                 RemoverUmaPorta(portas);
+                EscolheOutraPorta(portas);
 
                 if ( Venceu(portas) )
                     VITORIAS++;
@@ -107,6 +110,7 @@ namespace Curso
             return ret;
         }
 
+
         public static List<Porta> RemoverUmaPorta(List<Porta> portas)
         {
             foreach (Porta p in portas)
@@ -119,6 +123,21 @@ namespace Curso
             }
 
             return portas;
+        }
+
+
+        public static void EscolheOutraPorta(List<Porta> portas)
+        {
+            foreach (Porta p in portas)
+            {
+                if (p.Valida)
+                {
+                    if (p.Escolhida)
+                        p.Escolhida = false;
+                    else
+                        p.Escolhida = true;
+                }
+            }
         }
 
     }
